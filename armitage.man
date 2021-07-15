@@ -1,0 +1,19 @@
+.\" Manpage for armitage.sm
+.TH man sm "stardate 2005.11" "1.0" "armitage man page"
+.SH armitage
+ armitage \- Configure theme file of fluxbox.
+.SH SYNOPSIS
+ armitage.sm is a text file.
+.SH DESCRIPTION
+ Themes, also referred to as Styles, are a graphical overlay for the fluxbox window manager. If you wanted to get to know fluxbox, the styles would be the "look" of the "look and feel". 
+.SH OPTIONS
+ armitage does not take any options.
+.SH NOTES
+ A symbolic link to this file must be created in ~/.fluxbox/styles/theme.cfg.
+ Original theme, named bora_black, by tenner.
+.SH SEE ALSO
+ fluxbox-style(5)
+.SH BUGS
+ No known bugs (yet).
+.SH AUTHOR
+ carriunix (marcuscarriao@gmail.com)

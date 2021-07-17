@@ -1,0 +1,2 @@
+1	JOÃO FULANO	fulano@email.com						 TÍTULO DO MINICURSO MINISTRADO	10	 	
+2	JOSÉ CICLANO	ciclano@email.com						 TÍTULO DO MINICURSO MINISTRADO	10	 	

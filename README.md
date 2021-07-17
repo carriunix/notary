@@ -61,7 +61,7 @@ checkTurn on radio button.
   
 The email composition will be done by using mutt: a command line client. Edit/create the file 
 .muttrc to set configuration. Here is an example:
-   > set realname = "Escola de Física - UFG"
+   > set realname = "Event name"
    > 
    > set from = "eventname@email.com"
    > 
@@ -83,9 +83,17 @@ The email composition will be done by using mutt: a command line client. Edit/cr
    > 
    > set ssl_force_tls = yes
  
-## running the script
-   
+## editing the file script
+The notary.sh script can be adapted depending on the event characteristics. However, there are at
+least one section to be modified. The first function of the script, named "envio", produce the zip
+files and send them using mutt. So, if you want to produce the certificates, but do not send them,
+you must comment the line:
+   > mutt -s "Email title" $email < $DIR/email_$modelo.txt -a /tmp/certificados_$ID.zip
+On the other hand, if you want to send the certificates, you must edit the "Email title".
   
+## running the script
+Remember of change notary.sh permission. Run it as usual:
+   > ./notary.sh
 
 ## copyleft
    NOTARY is distribute under MIT license. See COPYING.txt.

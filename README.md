@@ -1,5 +1,4 @@
 # the NOTARY script
------
 
 ## what is?
     NOTARY is a shell-script based application developed to create and distribute certificates.

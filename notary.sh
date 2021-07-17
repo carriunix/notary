@@ -6,6 +6,27 @@
 # carriunix (carriunix@gmail.com)
 #
 #
+# Copyright 2021 Marcus Carrião (carriunix@gmail.com)
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the 
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to 
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be included
+# in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+# OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
+# CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+# TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+# SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#
 envio() {
 # Gerar zip dos certificados e enviar por email/Generate zip file and send by email
   echo "Enviando para inscrito n. $ID"
@@ -68,6 +89,7 @@ tipo1() {
   envio
 }
 tipo2() { 
+# Gerar certificado de palestrante/Generate speaker certificate
   name=`cat $arquivo | awk -F "\t" '{print $2}' | head -n $i | tail -n 1`;
   email=`cat $arquivo | awk -F "\t" '{print $3}' | head -n $i | tail -n 1`;
   title=`cat $arquivo | awk -F "\t" '{print $5}' | head -n $i | tail -n 1`;
@@ -80,6 +102,7 @@ tipo2() {
   envio
 }
 tipo3() {
+# Gerar certificado instrutor de minicurso/Generate workshop instructor certificate
   name=`cat $arquivo | awk -F "\t" '{print $2}' | head -n $i | tail -n 1`;
   email=`cat $arquivo | awk -F "\t" '{print $3}' | head -n $i | tail -n 1`;
   course1=`cat $arquivo | awk -F "\t" '{print $9}' | head -n $i | tail -n 1`;
@@ -93,6 +116,7 @@ tipo3() {
   envio
 }
 tipo4() { 
+# Gerar certificado de monitor/Generate monitor certificate
   name=`cat $arquivo | awk -F "\t" '{print $2}' | head -n $i | tail -n 1`;
   email=`cat $arquivo | awk -F "\t" '{print $3}' | head -n $i | tail -n 1`;
   hours=`cat $arquivo | awk -F "\t" '{print $4}' | head -n $i | tail -n 1`;
@@ -140,4 +164,3 @@ do
   esac
 
 done
-

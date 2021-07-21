@@ -1,6 +1,6 @@
 # the NOTARY script
 
-## what is?
+## what is it?
     NOTARY is a shell-script based application developed to create and distribute certificates.
 
     This script was developed for Escola de Física and Semana da Física events, of Instituto de 
